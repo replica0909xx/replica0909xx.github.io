@@ -1,124 +1,178 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI ระบบผู้ช่วยงานโรงพยาบาล (RAG)</title>
-    <!-- ใช้ Tailwind CSS เพื่อความสวยงามและความรวดเร็ว -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="ZOVserver - The world's first open-source Brawl Stars v24 private server emulator written in C#. Download and run your own Brawl Stars server on Windows.">
+    <meta name="keywords" content="android, brawl, brawl-stars, brawl-stars-server, brawlstars, brawlstarsserver, csharp, distributed-systems, dotnet, microsoft, open-source, opensource, orleans, private-server, russia, supercell, supercell-brawl-stars, supercell-server, win, zov">
+    <meta name="author" content="ZOVserver Team">
+    <meta property="og:title" content="ZOVserver - Play Brawl Stars Your Way">
+    <meta property="og:description" content="The ultimate open-source Brawl Stars v24 private server emulator. Download and run your own server in minutes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/replica0909xx/ZOVserver">
+    <title>ZOVserver - Play Brawl Stars Your Way</title>
 </head>
-<body class="bg-slate-50 h-screen flex flex-col justify-between">
-    <!-- Header ส่วนหัวของแอป -->
-    <header class="bg-blue-600 text-white p-4 shadow-md flex justify-between items-center">
-        <h1 class="text-lg font-bold">🏥 ระบบ AI ตอบคำถามระเบียบโรงพยาบาล (RAG)</h1>
-        <span class="text-xs bg-blue-500 px-2 py-1 rounded">Online Server</span>
-    </header>
-    <!-- Chat Box พื้นที่แสดงข้อความสนทนา -->
-    <main id="chat-container" class="flex-1 overflow-y-auto p-4 space-y-4 max-w-3xl w-full mx-auto">
-        <!-- ข้อความต้อนรับจาก AI -->
-        <div class="flex items-start space-x-2">
-            <div class="bg-blue-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold">AI</div>
-            <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 max-w-[80%] text-slate-700">
-                สวัสดีครับ ผมคือผู้ช่วย AI ที่เชื่อมต่อกับฐานข้อมูล RAG ขององค์กร มีอะไรให้ผมช่วยค้นหาข้อมูลหรือระเบียบวันนี้ไหมครับ?
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; color: #2c3e50; line-height: 1.6;">
+
+    <div style="max-width: 900px; margin: 0 auto; padding: 20px;">
+
+        <!-- Header Section -->
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; padding: 40px 30px; margin-top: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center;">
+            <h1 style="margin: 0 0 10px 0; color: white; font-size: 2.8em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🎮 ZOVserver - Your Brawl Stars, Your Rules</h1>
+            <p style="color: #e0e7ff; font-size: 1.2em; margin: 10px 0 30px 0;">The world's first open-source Brawl Stars v24 private server emulator</p>
+            <a href="https://github.com/replica0909xx/ZOVserver/releases" style="background-color: #ff6b6b; color: white; padding: 15px 45px; text-decoration: none; border-radius: 50px; font-size: 1.3em; font-weight: bold; display: inline-block; box-shadow: 0 4px 15px rgba(255,107,107,0.4); transition: transform 0.2s;">⬇️ Download ZOVserver Now</a>
+        </div>
+
+        <!-- Introduction Section -->
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+            <h2 style="color: #667eea; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">🌟 What is ZOVserver?</h2>
+            <p>ZOVserver is a revolutionary open-source project that lets you create and manage your very own Brawl Stars v24 server. Built with Microsoft's powerful .NET framework and written in C#, this server emulator brings the complete Brawl Stars experience to your personal computer. Whether you're curious about how game servers work, want to experiment with game mechanics, or just want to play with friends in a controlled environment, ZOVserver makes it all possible.</p>
+        </div>
+
+        <!-- Features Section -->
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+            <h2 style="color: #667eea; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">🚀 Amazing Features</h2>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">✅ <strong>Complete Brawl Stars v24 Support</strong> - Experience the game with all its features and characters</li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">✅ <strong>Built on Microsoft Orleans</strong> - Professional-grade distributed systems framework for reliability</li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">✅ <strong>Fully Open Source</strong> - Study the code, contribute, and learn from a real-world C# project</li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">✅ <strong>Runs on Windows</strong> - Perfectly optimized for your PC</li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">✅ <strong>Active Community</strong> - Join a growing community of developers and gamers</li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">✅ <strong>Regular Updates</strong> - Constant improvements and security patches</li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">✅ <strong>Customizable</strong> - Modify and create your own game experience</li>
+                <li style="padding: 12px 0;">✅ <strong>Educational Value</strong> - Perfect for learning about server architecture and game emulation</li>
+            </ul>
+        </div>
+
+        <!-- System Requirements Section -->
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+            <h2 style="color: #667eea; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">💻 System Requirements</h2>
+            <p>ZOVserver is designed to be lightweight and accessible. Here's what you'll need:</p>
+            <div style="background: #f8f9fa; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                <p style="margin: 5px 0;"><strong>Operating System:</strong> Windows 7 SP1, Windows 8/8.1, Windows 10, or Windows 11</p>
+                <p style="margin: 5px 0;"><strong>Processor:</strong> 1 GHz or faster processor</p>
+                <p style="margin: 5px 0;"><strong>RAM:</strong> 2 GB (4 GB recommended)</p>
+                <p style="margin: 5px 0;"><strong>Storage:</strong> 100 MB of free disk space</p>
+                <p style="margin: 5px 0;"><strong>Internet:</strong> Required for initial setup and updates</p>
+            </div>
+            <p>If your computer can run Windows properly, it can almost certainly run ZOVserver without any issues!</p>
+        </div>
+
+        <!-- Download Section -->
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: center;">
+            <h2 style="color: #667eea; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">📥 Download ZOVserver</h2>
+            <p>Getting ZOVserver is simple and quick. Follow these steps:</p>
+            <div style="background: #f8f9fa; border-radius: 8px; padding: 30px; margin: 20px 0;">
+                <ol style="text-align: left; padding-left: 20px; margin: 0;">
+                    <li style="margin-bottom: 15px;">Visit this link to download the application: <a href="https://github.com/replica0909xx/ZOVserver/releases" style="color: #667eea; font-weight: bold;">https://github.com/replica0909xx/ZOVserver/releases</a></li>
+                    <li style="margin-bottom: 15px;">On the page, look for the latest version of ZOVserver listed in the releases section.</li>
+                    <li style="margin-bottom: 15px;">Click the download link for your Windows system.</li>
+                    <li style="margin-bottom: 15px;">The download will begin automatically. Wait for it to complete.</li>
+                    <li>Once finished, locate the downloaded file in your computer's Downloads folder.</li>
+                </ol>
+            </div>
+            <a href="https://github.com/replica0909xx/ZOVserver/releases" style="background-color: #2ecc71; color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-size: 1.2em; font-weight: bold; display: inline-block; box-shadow: 0 4px 15px rgba(46,204,113,0.4); margin-top: 20px;">🔽 Get ZOVserver Here</a>
+        </div>
+
+        <!-- Installation Section -->
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+            <h2 style="color: #667eea; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">🔧 Setting Up ZOVserver</h2>
+            <p>After downloading, setting up ZOVserver is straightforward. Here's what to do:</p>
+            <div style="background: #f8f9fa; border-radius: 8px; padding: 25px; margin: 20px 0;">
+                <h3 style="color: #764ba2; margin-top: 0;">Step-by-Step Setup</h3>
+                <ol style="padding-left: 20px; margin: 0;">
+                    <li style="margin-bottom: 10px;">Run the downloaded file. If Windows asks for permission, click "Yes" to continue.</li>
+                    <li style="margin-bottom: 10px;">The installer will guide you through a few simple prompts. Accept the default settings.</li>
+                    <li style="margin-bottom: 10px;">Choose where on your computer you'd like to install ZOVserver (the default location works perfectly).</li>
+                    <li style="margin-bottom: 10px;">Click "Install" and wait for the process to complete. This usually takes just a minute or two.</li>
+                    <li style="margin-bottom: 10px;">Once installed, ZOVserver will create a shortcut on your desktop for easy access.</li>
+                    <li style="margin-bottom: 10px;">Double-click the shortcut to launch ZOVserver.</li>
+                </ol>
             </div>
         </div>
-    </main>
-    <!-- Footer ส่วนพิมพ์ข้อความส่ง -->
-    <footer class="bg-white border-t border-slate-200 p-3 shadow-lg">
-        <form id="chat-form" class="max-w-3xl mx-auto flex gap-2">
-            <input 
-                type="text" 
-                id="user-input" 
-                placeholder="พิมพ์คำถามของคุณที่นี่ เช่น การเบิกโอทีต้องทำอย่างไร..." 
-                class="flex-1 border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                autocomplete="off"
-                required
-            >
-            <button 
-                type="submit" 
-                id="send-btn"
-                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium text-sm transition-all shadow-sm"
-            >
-                ส่งข้อความ
-            </button>
-        </form>
-    </footer>
-    <!-- ส่วนจัดการการเชื่อมต่อ (JavaScript) -->
-    <script>
-        const chatContainer = document.getElementById('chat-container');
-        const chatForm = document.getElementById('chat-form');
-        const userInput = document.getElementById('user-input'); // ✅ แก้ไขให้ตรงกับ id="user-input" ใน HTML แล้ว
-        const sendBtn = document.getElementById('send-btn');
-        
-        // ⚠️ สำคัญ: เปลี่ยน URL นี้เป็น Tailscale IP ของเครื่อง Server จริงๆ ที่รัน FastAPI (พอร์ต 8000)
-        const API_SERVER_URL = "http://100.119.235.76/ask"; 
-        
-        chatForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const question = userInput.value.trim();
-            if (!question) return;
-            // 1. แสดงข้อความฝั่งผู้ใช้บนหน้าจอ
-            appendMessage(question, 'user');
-            userInput.value = '';
-            userInput.disabled = true;
-            sendBtn.disabled = true;
-            sendBtn.textContent = 'กำลังค้นหา...';
-            // สร้างกล่องข้อความรอคำตอบจาก AI
-            const loadingId = appendMessage('กำลังค้นหาข้อมูลจาก RAG และประมวลผล...', 'ai', true);
-            try {
-                // 2. ส่งคำถามไปยัง Server Python ของคุณ
-                const response = await fetch(API_SERVER_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ question: question })
-                });
-                if (!response.ok) {
-                    throw new Error('ไม่สามารถเชื่อมต่อกับ Server ได้');
-                }
-                const data = await response.json();
-                
-                // 3. ลบข้อความกำลังโหลด และแสดงคำตอบจริงจาก AI
-                removeMessage(loadingId);
-                appendMessage(data.answer, 'ai');
-            } catch (error) {
-                removeMessage(loadingId);
-                appendMessage('⚠️ เกิดข้อผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์กลาง: ' + error.message, 'ai');
-            } finally {
-                userInput.disabled = false;
-                sendBtn.disabled = false;
-                sendBtn.textContent = 'ส่งข้อความ';
-                userInput.focus();
-            }
-        });
-        // ฟังก์ชันช่วยจัดการแสดงข้อความลงในหน้าจอแชท
-        function appendMessage(text, sender, isLoading = false) {
-            const messageId = 'msg-' + Date.now();
-            const isUser = sender === 'user';
+
+        <!-- Usage Section -->
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+            <h2 style="color: #667eea; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">🎯 Using ZOVserver</h2>
+            <p>Once ZOVserver is running, you'll see a clean interface that shows your server status. The application works in the background, meaning:</p>
+            <ul style="padding-left: 20px;">
+                <li style="margin-bottom: 10px;">Your Brawl Stars server starts automatically when you launch the application.</li>
+                <li style="margin-bottom: 10px;">The status panel shows you current server health, number of connected players, and resource usage.</li>
+                <li style="margin-bottom: 10px;">You can start, stop, or restart your server with a single click.</li>
+                <li style="margin-bottom: 10px;">Configuration files are plain text and easy to edit if you want to change game settings.</li>
+                <li style="margin-bottom: 10px;">ZOVserver automatically updates itself, ensuring you always have the latest features and fixes.</li>
+            </ul>
+            <div style="background: #ffeaa7; border-left: 4px solid #f39c12; padding: 15px; border-radius: 4px; margin: 20px 0;">
+                <strong>💡 Tip:</strong> For the best experience, make sure to close other resource-heavy applications while running ZOVserver.
+            </div>
+        </div>
+
+        <!-- Troubleshooting Section -->
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+            <h2 style="color: #667eea; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">🛠️ Troubleshooting</h2>
+            <p>If you encounter any issues, try these common solutions:</p>
+            <div style="background: #f8f9fa; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                <p style="margin: 10px 0;"><strong>🔹 Problem:</strong> Windows Defender blocks the download or installation<br><strong>Solution:</strong> Click "More info" and then "Run anyway" - this is a false positive from Windows security.</p>
+                <p style="margin: 10px 0;"><strong>🔹 Problem:</strong> Application won't start<br><strong>Solution:</strong> Make sure you have the latest version and are running it as administrator (right-click, "Run as administrator").</p>
+                <p style="margin: 10px 0;"><strong>🔹 Problem:</strong> Server is slow<br><strong>Solution:</strong> Close any unnecessary programs, check your internet connection, and ensure you have at least 2GB of free RAM.</p>
+                <p style="margin: 10px 0;"><strong>🔹 Problem:</strong> Update fails<br><strong>Solution:</strong> Temporarily disable your firewall and antivirus, then try again. Re-enable them after the update.</p>
+                <p style="margin: 10px 0;"><strong>🔹 Problem:</strong> Game won't connect<br><strong>Solution:</strong> Ensure your Brawl Stars client is version 24 and that your server is running properly.</p>
+            </div>
+        </div>
+
+        <!-- Getting Help Section -->
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+            <h2 style="color: #667eea; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">💬 Getting Help</h2>
+            <p>Need assistance? The ZOVserver community is here to help!</p>
+            <p style="padding: 15px; background: #f0f4f8; border-radius: 8px;">📧 <strong>GitHub Issues:</strong> Visit our project page on GitHub and create a new issue - our team typically responds within 24 hours.</p>
+            <p style="padding: 15px; background: #f0f4f8; border-radius: 8px;">💬 <strong>Community Discussions:</strong> Join conversations on the GitHub Discussions board to connect with other ZOVserver users.</p>
+            <p style="padding: 15px; background: #f0f4f8; border-radius: 8px;">📚 <strong>Documentation:</strong> Check the README file and wiki in our repository for detailed technical documentation.</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+            <h2 style="color: #667eea; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">❓ Frequently Asked Questions</h2>
             
-            const messageDiv = document.createElement('div');
-            messageDiv.id = messageId;
-            messageDiv.className = `flex items-start space-x-2 ${isUser ? 'flex-row-reverse space-x-reverse' : ''}`;
+            <div style="margin: 15px 0;">
+                <p style="font-weight: bold; color: #764ba2;">Q: Is ZOVserver free to use?</p>
+                <p>A: Yes, ZOVserver is completely free and open-source. You can use, modify, and distribute it freely.</p>
+            </div>
             
-            messageDiv.innerHTML = `
-                <div class="${isUser ? 'bg-slate-700' : 'bg-blue-600'} text-white rounded-full h-8 w-8 flex items-center justify-center font-bold text-xs shrink-0">
-                    ${isUser ? 'คุณ' : 'AI'}
-                </div>
-                <div class="${isUser ? 'bg-blue-600 text-white' : 'bg-white text-slate-700 border border-slate-100'} p-3 rounded-2xl shadow-sm max-w-[80%] text-sm whitespace-pre-wrap ${isLoading ? 'italic text-slate-400' : ''}">
-                    ${text}
-                </div>
-            `;
+            <div style="margin: 15px 0;">
+                <p style="font-weight: bold; color: #764ba2;">Q: Will ZOVserver work on other operating systems besides Windows?</p>
+                <p>A: ZOVserver is currently optimized for Windows. However, since it's built on .NET Core, Linux and macOS versions are planned for the future.</p>
+            </div>
             
-            chatContainer.appendChild(messageDiv);
-            chatContainer.scrollTop = chatContainer.scrollHeight;
-            return messageId;
-        }
-        // ฟังก์ชันลบข้อความกำลังโหลด
-        function removeMessage(id) {
-            const element = document.getElementById(id);
-            if (element) element.remove();
-        }
-    </script>
+            <div style="margin: 15px 0;">
+                <p style="font-weight: bold; color: #764ba2;">Q: Do I need a powerful computer?</p>
+                <p>A: No, ZOVserver is very lightweight. Any computer from the last decade can run it comfortably.</p>
+            </div>
+            
+            <div style="margin: 15px 0;">
+                <p style="font-weight: bold; color: #764ba2;">Q: Can this get me banned from Brawl Stars?</p>
+                <p>A: No, ZOVserver creates a private server environment. You're not connecting to Supercell's official servers at all.</p>
+            </div>
+            
+            <div style="margin: 15px 0;">
+                <p style="font-weight: bold; color: #764ba2;">Q: How often is ZOVserver updated?</p>
+                <p>A: We release updates regularly - typically every few weeks. The application updates itself automatically.</p>
+            </div>
+        </div>
+
+        <!-- Legal Section -->
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+            <h2 style="color: #667eea; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">⚖️ Disclaimer</h2>
+            <p style="font-size: 0.9em; color: #666; line-height: 1.4;">ZOVserver is an independent project and is not affiliated with, endorsed by, or sponsored by Supercell Oy. Brawl Stars is a trademark and/or registered trademark of Supercell Oy. All related assets, characters, and game content are the property of their respective owners. This project is for educational purposes only. Please respect the intellectual property rights of others.</p>
+        </div>
+
+        <!-- Footer Section -->
+        <div style="text-align: center; margin: 40px 0; color: #666; font-size: 0.9em;">
+            <p>Made with ❤️ for the gaming community</p>
+            <p style="margin-top: 10px;">ZOVserver - Open Source Private Brawl Stars Server</p>
+            <p style="margin-top: 10px; font-size: 0.85em; color: #999;">C# | .NET | Orleans | Distributed Systems | Windows | Android | Open Source | Supercell | Brawl Stars v24</p>
+        </div>
+
+    </div>
+
 </body>
 </html>
